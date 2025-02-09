@@ -1,17 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { UserMenu } from "./UserMenu"; // Importamos el nuevo componente
 import "./Navbar.css";
 import logo from "../assets/logo.png";
 
 export const Navbar: React.FC = () => {
-  const { user, logout } = useContext(AuthContext);
-  const [menuOpen, setMenuOpen] = useState(true);
-
-  // 🔹 Alternar la visibilidad del menú
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const { user } = useContext(AuthContext);
 
   return (
     <nav className="navbar">
@@ -21,17 +16,7 @@ export const Navbar: React.FC = () => {
         <div className="right-section">
           <span className="cart-icon">🛒</span>
           {user ? (
-            <div className="user-menu">
-              <button className="user-button" onClick={toggleMenu}>
-                {user.usuario} ⬇
-              </button>
-              {menuOpen && (
-                <div className="dropdown-menu">
-                  <Link to="/orders">Ver pedidos</Link>
-                  <button onClick={logout}>Cerrar sesión</button>
-                </div>
-              )}
-            </div>
+            <UserMenu />
           ) : (
             <Link to="/login" className="button">
               Iniciar sesión
