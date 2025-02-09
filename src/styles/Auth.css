@@ -1,4 +1,4 @@
-/* Estilos generales para Login y Register */
+/* 🔹 Contenedor principal */
 .auth-container {
   width: 100%;
   max-width: 400px;
@@ -7,25 +7,30 @@
   background-color: #e0efff;
   padding: 20px;
   border-radius: 10px;
+  margin-top: 80px; /* Ajuste para evitar que quede cubierto por el Navbar */
 }
 
+/* 🔹 Título */
 .auth-title {
   font-size: 1.8rem;
   font-weight: bold;
   color: #1a1a1a;
 }
 
+/* 🔹 Mensaje de error */
 .auth-error {
   color: red;
   font-size: 1rem;
 }
 
+/* 🔹 Etiquetas */
 label {
   font-weight: bold;
   display: block;
   margin-top: 10px;
 }
 
+/* 🔹 Inputs */
 input {
   width: 100%;
   padding: 10px;
@@ -34,6 +39,7 @@ input {
   border-radius: 5px;
 }
 
+/* 🔹 Botón */
 .auth-button {
   width: 100%;
   padding: 10px;
@@ -45,6 +51,7 @@ input {
   cursor: pointer;
 }
 
+/* 🔹 Enlace de cambio */
 .auth-link {
   margin-top: 10px;
   cursor: pointer;

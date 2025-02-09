@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 import "./Navbar.css";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
 
 export const Navbar: React.FC = () => {
+  const { user, logout } = useContext(AuthContext);
+
   return (
     <nav className="navbar">
-      {/* Sección superior con logo y carrito/botón */}
       <div className="top-section">
-        <Link to="/">
-          <img src={logo} alt="Krusty Krab" className="logo" />
-        </Link>
+        <img src={logo} alt="Krusty Krab" className="logo" />
 
-        {/* Carrito y botón de sesión alineados a la derecha */}
         <div className="right-section">
           <span className="cart-icon">🛒</span>
-          <button className="button">Iniciar sesión</button>
+          {user ? (
+            <button className="button" onClick={logout}>
+              {user.usuario} (Salir)
+            </button>
+          ) : (
+            <Link to="/login" className="button">
+              Iniciar sesión
+            </Link>
+          )}
         </div>
       </div>
 
-      {/* Enlaces centrados debajo */}
       <div className="links">
         <Link to="/">HOME</Link>
         <Link to="/menu">VER MENÚ</Link>
