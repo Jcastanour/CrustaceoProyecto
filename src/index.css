@@ -1,0 +1,66 @@
+/* src/index.css */
+
+/* 🔹 Reset básico para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🔹 Estilos globales */
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  background: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 70px; /* Espaciado para evitar solapamiento con el Navbar */
+}
+
+/* 🔹 Contenedor principal para centrar el contenido, 
+   pero permitiendo usar todo el ancho disponible */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* 🔹 En pantallas muy grandes, podemos limitar el ancho máximo */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* 🔹 Estilos globales para enlaces y botones */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1rem;
+}
+
+button:focus {
+  outline: 2px solid #007bff;
+}
+
+/* 🔹 Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  body {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,67 @@
+/* frontend/src/views/Cart.css */
+.cart {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cart h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.cart p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.cartList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.cartItem {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.cartItem h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.cartItem p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.cartItem .price {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.cartItem button {
+  background: #c0392b;
+  color: #ecf0f1;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cartItem button:hover {
+  background: #e74c3c;
+}
